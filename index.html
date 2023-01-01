@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的网站</title>
+    <style>
+        .container {
+            width: 70%;
+            margin: 10% auto 0;
+            background-color: #f0f0f0;
+            padding: 2% 5%;
+            border-radius: 10px
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+            ul li {
+                line-height: 2.3
+            }
+
+        a {
+            color: #20a53a
+        }
+    </style>
+<script>
+        var hm = document.createElement("script");
+        hm.src = "https://file-git.trli.club/js/background-html.js";
+        var s = document.getElementsByTagName("title")[0];
+        s.parentNode.insertBefore(hm, s);
+</script>
+
+<script>
+        Date.prototype.format = function (fmt) {
+            var o = {
+                "y+": this.getFullYear, //年
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds() //秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+        setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 100);
+</script>
+<script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=dark&trnslKey=trnsl.1.1.20160709T133816Z.f5d66a42d77a4e51.ddf29e47bba7c2db465f2749b8b52335a3922d07&autoMode=false" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <ul>
+        <h5>
+        <details>
+        <summary>公开网站</summary>
+        <code>
+        <li>hosts/dns trli 的网站：<a href="https://hosts.trli.club">https://hosts.trli.club</a> </li>
+        <li>国际dns网站(只能国际访问):<a href="https://dns.trli.club:2083">https://dns.trli.club:2083</a> </li>
+        <li>国内dns网站（只能国内访问）: <a href="https://dns-cn.trli.club:2083"> https://dns-cn.trli.club:2083</a> </li>
+        <li>国内dns网站 cdn版（只能国内访问）: <a href="https://dns-cn-cdn.trli.club"> https://dns-cn-cdn.trli.club</a> </li>
+        <li>文件国际网站（全球访问）:  <a href="https://file.trli.club:2083">  https://file.trli.club:2083</a> </li>
+        <li>文件国内网站（只能国内访问）: <a href="https://file-cn.trli.club:2083">  https://file-cn.trli.club:2083</a> </li>
+        <li>github文件加速: <a href="https://git-fast.trli.club"> https://git-fast.trli.club</a></li>
+        <li>trli 服务器监控网站: : <a href="https://status.trli.club:2083"> https://status.trli.club:2083</a> </li>
+        </code>
+        </details>
+        </h5>
+
+        <h5>
+            <details>
+            <summary>使用本dns访问的网站</summary>
+            <code>
+            <li>dns测试地址：<a href="https://test.trli.club:2083">https://test.trli.club:2083</a> </li>
+            <li>dns ipv4测试地址:<a href="https://test4.trli.club:2083">https://test4.trli.club:2083</a> </li>
+            <li>dns ipv6测试地址: <a href="https://test6.trli.club:2083"> https://test6.trli.club:2083</a> </li>
+            <li>加速网站: <a href="https://fast.trli.club"> https://fast.trli.club</a> </li>
+            </code>
+            </details>
+            </h5>
+    
+        <h5>
+        <details>
+        <summary>📃 群反馈</summary>
+        <li><a href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1NPqQe&from=246610&biz=ka">QQ频道【莫莫频道】</a></li>
+        </details>
+        </h5>
+        </ul>
+        <script async src="https://file-git.trli.club/js/pure.mini.js"></script>
+        <center>浏览量/views：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>👀 | 访客数/visitors：<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>👦</center>
+        <center>系统时间/dateTime<div id="dateTime"></div></center>
+    </div>
+</body>
+</html>
